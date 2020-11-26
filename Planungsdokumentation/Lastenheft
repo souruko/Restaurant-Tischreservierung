@@ -1,1 +1,18 @@
+Lastenheft zur Projektarbeit der Gruppe 3
 
+<b>Einführung</b>
+Der Kunde möchte gerne ein System entwickelt haben, welches den Kunden die Möglichkeit gibt, einen Tisch an einem bestimmten Datum, für eine bestimmte Dauer digital zu reservieren.
+
+<b>IST-Situation</b>
+Derzeit ist es Kunden nicht möglich eigenständig Tische zu reserviereb. Sie müssen sich an einen Mitarbeiter persönlich oder telefonisch wenden, welche für die Tischbuchung zuständig ist.
+
+<b>SOLL-Situation</b>
+Der Kunde soll die Möglichkeit besitzen bequem per App oder Webseite von zuhause oder unterwegs sich für eine Uhrzeit einen Tisch reservieren zu können. Er soll den passenden Tisch (je nach Anzahl Besucher) sowie die passende Uhrzeit für eine gewisse Zeitspanne reservieren können und die Reservierung an das Lokal übertragen werden. Es sollen ihm nur freie (in der Zeitspanne verfügbare) und Tische mit genügend Platz nach seiner Eingabe angezeigt werden, aus denen er dann auswählen kann.
+
+<b>Beschreibung der Veränderung</b>
+Digitales System einführen
++ Webseite erstellen mit Grundriss des Lokals
++ Im Grundriss Tische mit Anzahl Plätze positionieren
++ Timeline für jeden Tisch erstellen / Zeitspanne festlegen!
++ Reservierungswunsch übertragen an Restaurant
++ eventuell Kontaktaddresse des Kunden (z.b. Email oder Telefon) zur Stornierung oder Änderung der Reservierung - aus Sicht des Restaurant
