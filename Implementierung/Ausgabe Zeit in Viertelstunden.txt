@@ -1,0 +1,14 @@
+TimeSpan viertelStunde = TimeSpan.FromMinutes(15);
+            string Anfang = "11:00";
+            string Ende = "22:30";
+
+            TimeSpan A;
+            TimeSpan.TryParse(Anfang, out A);
+            TimeSpan B;
+            TimeSpan.TryParse(Ende, out B);
+            TimeSpan Differenz = B - A;
+            for (int i = 0; i < (Differenz/viertelStunde);i++)
+            {
+                Console.WriteLine(A);
+                A += viertelStunde;
+            }
