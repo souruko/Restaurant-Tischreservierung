@@ -11,8 +11,8 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -26,14 +26,14 @@
         <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Email:</TextBlock>
 
 
-        <TextBox Name="NameTB" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
-        <TextBox Name="PhoneNumberTB" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
-        <TextBox Name="EmailTB"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+        <TextBox Name="NameTB" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></TextBox>
+        <TextBox Name="PhoneNumberTB" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></TextBox>
+        <TextBox Name="EmailTB"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></TextBox>
 
         <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center">Zusammenfassung ...</TextBlock>
 
-        <Button Grid.Row="4" Grid.Column="0" Click="Back_Click">Back</Button>
-        <Button Grid.Row="4" Grid.Column="1" Click="Cancel_Click">Cancel</Button>
-        <Button Grid.Row="4" Grid.Column="2" Click="Confirm_Click">Confirm</Button>
+        <Button Grid.Row="4" Grid.Column="0" Margin="3" Click="Back_Click">Back</Button>
+        <Button Grid.Row="4" Grid.Column="1" Margin="3" Click="Cancel_Click">Cancel</Button>
+        <Button Grid.Row="4" Grid.Column="2" Margin="3" Click="Confirm_Click">Confirm</Button>
     </Grid>
 </UserControl>

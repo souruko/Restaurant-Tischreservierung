@@ -9,10 +9,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -27,15 +27,15 @@
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Start:</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">End:</TextBlock>
 
-        <TextBox Name="NOPTextBox" Grid.Row="2" Grid.Column="0"></TextBox>
-        <TextBox Name="StartTextBox" Grid.Row="2" Grid.Column="1"></TextBox>
-        <TextBox Name="EndTextBox" Grid.Row="2" Grid.Column="2"></TextBox>
+        <TextBox Name="NOPTextBox" Grid.Row="2" Grid.Column="0" Margin="3"></TextBox>
+        <TextBox Name="StartTextBox" Grid.Row="2" Grid.Column="1" Margin="3"></TextBox>
+        <TextBox Name="EndTextBox" Grid.Row="2" Grid.Column="2" Margin="3"></TextBox>
 
         <ListBox Name="TischListBox"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"></ListBox>
 
-        <Button Grid.Row="4" Grid.Column="0" Click="Back_Click">Back</Button>
-        <Button Grid.Row="4" Grid.Column="1" Click="Cancel_Click">Cancel</Button>
-        <Button Grid.Row="4" Grid.Column="2" Click="Select_Click">Select</Button>
+        <Button Grid.Row="4" Grid.Column="0" Margin="3" Click="Back_Click">Back</Button>
+        <Button Grid.Row="4" Grid.Column="1" Margin="3" Click="Cancel_Click">Cancel</Button>
+        <Button Grid.Row="4" Grid.Column="2" Margin="3" Click="Select_Click">Select</Button>
 
     </Grid>
 </UserControl>

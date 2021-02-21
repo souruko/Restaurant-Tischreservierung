@@ -13,31 +13,32 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Restaurant:</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Number of people:</TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Start:</TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">End:</TextBlock>
-        <ComboBox x:Name="NumberOfPeopleBox" Grid.Column="1"  Grid.Row="1" ></ComboBox>
-        <ComboBox Name="StartComboBox" Grid.Row="2" Grid.Column="1"></ComboBox>
-        <ComboBox Name="EndComboBox"  Grid.Row="3" Grid.Column="1"></ComboBox>
+        <ComboBox x:Name="RestaurantNameComboBox" Grid.Column="1" DisplayMemberPath="Name" HorizontalAlignment="Center" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="RestaurantNameComboBox_SelectionChanged">
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel/>
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
+        </ComboBox>
+        <ComboBox x:Name="NumberOfPeopleBox" Grid.Column="1"  Grid.Row="1"  HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></ComboBox>
+        <ComboBox Name="StartComboBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></ComboBox>
+        <ComboBox Name="EndComboBox"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></ComboBox>
 
-        <Button Name="ConfirmButton" Grid.Row="4" Grid.Column="1" Click="Button_Click">Confirm</Button>
+        <Button Name="ConfirmButton" Grid.Row="4" Grid.Column="1" Click="Button_Click" Margin="3" >Confirm</Button>
 
-        <ComboBox x:Name="RestaurantNameComboBox" Grid.Column="1" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="RestaurantNameComboBox_SelectionChanged">
-                <ComboBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel/>
-                    </ItemsPanelTemplate>
-                </ComboBox.ItemsPanel>
-            </ComboBox>
+       
 
     </Grid>
 </UserControl>
