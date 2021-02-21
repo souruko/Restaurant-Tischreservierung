@@ -3,13 +3,16 @@ Das Programm enthält zwei getrennte, nicht miteinander verbundene, Features. Zu
 
 
 Auflistung der Gruppenmitglieder:
-Marco Bentz   (Github: Marco041994)
-Oliver Risch  (Github: souruko)
-Fabian Ruttar (Github: Bottares)
+* Marco Bentz   (Github: Marco041994)
+* Oliver Risch  (Github: souruko)
+* Fabian Ruttar (Github: Bottares)
 
+Customer GUI:
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View1.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View2.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View3.PNG?raw=true)
+
+Employee GUI:
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Employee%20-%20Customer.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Employee%20-%20Reservation.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Employee%20-%20Time.PNG?raw=true)
