@@ -8,8 +8,8 @@ Auflistung der Gruppenmitglieder:
 * Fabian Ruttar (Github: Bottares)
 
 Customer GUI:  
-![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View1.PNG?raw=true)
-![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View2.PNG?raw=true)
+![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View1.PNG?raw=true)  
+![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View2.PNG?raw=true)  
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View3.PNG?raw=true)
 
 Employee GUI:  
