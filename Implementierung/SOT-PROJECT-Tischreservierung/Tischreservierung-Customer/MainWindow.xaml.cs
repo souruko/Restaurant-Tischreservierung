@@ -112,6 +112,7 @@ namespace Tischreservierung_Customer
         public void View2Select(int tableIndex)
         {
             SelectedTableID = tableIndex;
+            A3.FillSummary(SelectedRestaurantName, SelectedTableID, NumberOfPeople, StartTime, EndTime);
             ContentC.Content = A3;
         }
 

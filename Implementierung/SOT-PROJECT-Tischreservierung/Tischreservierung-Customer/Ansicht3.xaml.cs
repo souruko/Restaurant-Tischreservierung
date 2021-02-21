@@ -27,6 +27,11 @@ namespace Tischreservierung_Customer
             InitializeComponent();
         }
 
+        public void FillSummary(string RestaurantName, int TableID, int NumberOfPeople, TimeSpan StartPoint, TimeSpan EndPoint)
+        {
+            SummaryTB.Text = $"Restaurant: {RestaurantName}\nTable: {TableID}\nNumber of People: {NumberOfPeople}\nTime: {StartPoint} - {EndPoint}";
+        }
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             parent.View3Back();

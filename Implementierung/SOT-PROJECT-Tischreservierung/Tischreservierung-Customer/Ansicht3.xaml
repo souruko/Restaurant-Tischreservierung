@@ -30,7 +30,7 @@
         <TextBox Name="PhoneNumberTB" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></TextBox>
         <TextBox Name="EmailTB"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="Auto" Margin="3" VerticalAlignment="Center" Width="120"></TextBox>
 
-        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center">Zusammenfassung ...</TextBlock>
+        <TextBlock Name="SummaryTB" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"></TextBlock>
 
         <Button Grid.Row="4" Grid.Column="0" Margin="3" Click="Back_Click">Back</Button>
         <Button Grid.Row="4" Grid.Column="1" Margin="3" Click="Cancel_Click">Cancel</Button>
