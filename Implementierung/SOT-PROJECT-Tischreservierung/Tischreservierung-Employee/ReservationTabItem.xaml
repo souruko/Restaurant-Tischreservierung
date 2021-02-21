@@ -12,7 +12,7 @@
             <RowDefinition Height="5*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.Row="0" Name="FilterTB" TextChanged="FilterTB_TextChanged"></TextBox>
-        <ListBox Grid.Row="1" Name="ReservatischLB"></ListBox>
+        <TextBox Grid.Row="0" Name="FilterTextBox" TextChanged="FilterTextBox_TextChanged"></TextBox>
+        <ListBox Grid.Row="1" Name="ReservatableListBox"></ListBox>
     </Grid>
 </UserControl>

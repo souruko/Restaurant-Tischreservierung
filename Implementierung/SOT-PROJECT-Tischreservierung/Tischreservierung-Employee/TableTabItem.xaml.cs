@@ -25,7 +25,7 @@ namespace Tischreservierung_Employee
 
         int SelectedRestaurant = 0;
 
-        Dictionary<int, ListBoxItem> LBItems = new Dictionary<int, ListBoxItem>();
+        Dictionary<int, ListBoxItem> ListBoxItems = new Dictionary<int, ListBoxItem>();
         public TableTabItem(DBContext ctx)
         {
             this.ctx = ctx;
@@ -35,9 +35,9 @@ namespace Tischreservierung_Employee
 
         public void FillListBox()
         {
-            string txt = FilterTB.Text;
-            TableLB.Items.Clear();
-            LBItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => TableLB.Items.Add(x.Value));
+            string txt = FilterTextBox.Text;
+            TableListBox.Items.Clear();
+            ListBoxItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => TableListBox.Items.Add(x.Value));
 
 
         }
@@ -45,7 +45,7 @@ namespace Tischreservierung_Employee
         public void UpdateLB(int SelectedRestaurant)
         {
 
-            LBItems.Clear();
+            ListBoxItems.Clear();
             this.SelectedRestaurant = SelectedRestaurant;
             if (SelectedRestaurant != 0)
             {
@@ -58,7 +58,7 @@ namespace Tischreservierung_Employee
                         TextBlock tb = new TextBlock();
                         tb.Text = $"ID: {t.TableID}  TableSize: {t.TableSize}";
                         i.Content = tb;
-                        LBItems.Add(t.TableID, i);
+                        ListBoxItems.Add(t.TableID, i);
 
                     }
                 }
@@ -77,7 +77,7 @@ namespace Tischreservierung_Employee
                     TextBlock tb = new TextBlock();
                     tb.Text = $"ID: {r.ReservationID},  Number of People: {r.NumberOfPeople}, Table: {r.TableID}, Customer: {r.Customer.Name}, Start: {r.StartPoint}, End: {r.EndePoint}";
                     i.Content = tb;
-                    ReservationLB.Items.Add(i);
+                    ReservationListBox.Items.Add(i);
                 }
             }
         }
@@ -89,11 +89,11 @@ namespace Tischreservierung_Employee
 
         private void TableLB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ReservationLB.Items.Clear();
+            ReservationListBox.Items.Clear();
 
-            if (TableLB.SelectedItem != null)
+            if (TableListBox.SelectedItem != null)
             {
-                int index = LBItems.First(x => x.Value == TableLB.Items.GetItemAt(TableLB.SelectedIndex)).Key;
+                int index = ListBoxItems.First(x => x.Value == TableListBox.Items.GetItemAt(TableListBox.SelectedIndex)).Key;
 
                 UpdateReservationLB(index);
             }

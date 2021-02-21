@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Tischreservierung_Employee
+namespace Tablereservation_Employee
 {
     /// <summary>
     /// Interaktionslogik für "App.xaml"

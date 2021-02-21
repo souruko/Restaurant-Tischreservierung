@@ -27,11 +27,11 @@
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Start:</TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">End:</TextBlock>
 
-        <TextBox Name="NOPTextBox" Grid.Row="2" Grid.Column="0" Margin="3"></TextBox>
+        <TextBox Name="NumberOfPeopleTextBox" Grid.Row="2" Grid.Column="0" Margin="3"></TextBox>
         <TextBox Name="StartTextBox" Grid.Row="2" Grid.Column="1" Margin="3"></TextBox>
         <TextBox Name="EndTextBox" Grid.Row="2" Grid.Column="2" Margin="3"></TextBox>
 
-        <ListBox Name="TischListBox"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"></ListBox>
+        <ListBox Name="TableListBox"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"></ListBox>
 
         <Button Grid.Row="4" Grid.Column="0" Margin="3" Click="Back_Click">Back</Button>
         <Button Grid.Row="4" Grid.Column="1" Margin="3" Click="Cancel_Click">Cancel</Button>
