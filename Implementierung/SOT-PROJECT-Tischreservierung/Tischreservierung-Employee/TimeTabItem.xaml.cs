@@ -24,7 +24,7 @@ namespace Tischreservierung_Employee
 
         int SelectedRestaurant = 0;
 
-        Dictionary<int, ListBoxItem> ListBoxItems = new Dictionary<int, ListBoxItem>();
+        Dictionary<int, ListBoxItem> LBItems = new Dictionary<int, ListBoxItem>();
         public TimeTabItem(DBContext ctx)
         {
             this.ctx = ctx;
@@ -53,27 +53,27 @@ namespace Tischreservierung_Employee
 
         public void FillListBox()
         {
-            TimeListBox.Items.Clear();
-            ListBoxItems.Where(x => CheckReservationTime(x.Key)).ToList().ForEach(x => TimeListBox.Items.Add(x.Value));
+            TimeLB.Items.Clear();
+            LBItems.Where(x => CheckReservationTime(x.Key)).ToList().ForEach(x => TimeLB.Items.Add(x.Value));
 
         }
 
-        public void UpdateListBox(int SelectedRestaurant)
+        public void UpdateLB(int SelectedRestaurant)
         {
-            ListBoxItems.Clear();
+            LBItems.Clear();
             this.SelectedRestaurant = SelectedRestaurant;
             if (SelectedRestaurant != 0)
             {
 
                 foreach (Reservation r in ctx.Reservation)
                 {
-                    if (r.Table.RestaurantID == SelectedRestaurant)
+                    if (r.Tisch.RestaurantID == SelectedRestaurant)
                     {
-                        ListBoxItem lbi = new ListBoxItem();
+                        ListBoxItem i = new ListBoxItem();
                         TextBlock tb = new TextBlock();
                         tb.Text = $"ID: {r.ReservationID},  Number of People: {r.NumberOfPeople}, Table: {r.TableID}, Customer: {r.Customer.Name}, Start: {r.StartPoint}, End: {r.EndePoint}";
-                        lbi.Content = tb;
-                        ListBoxItems.Add(r.ReservationID, lbi);
+                        i.Content = tb;
+                        LBItems.Add(r.ReservationID, i);
 
                     }
                 }

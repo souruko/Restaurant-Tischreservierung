@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\marco\OneDrive\Desktop\Projekt SOT\Restaurant-Tischreservierung\Implementierung\SOT-PROJECT-Tischreservierung\Tischreservierung-Employee\obj\Debug\
+C:\Users\souru\Desktop\SOT-PROJECT\Neuer Ordner\Restaurant-Tischreservierung\Implementierung\SOT-PROJECT-Tischreservierung\Tischreservierung-Employee\obj\Debug\
 Tablereservation_Employee
 none
 false
 DEBUG;TRACE
-C:\Users\marco\OneDrive\Desktop\Projekt SOT\Restaurant-Tischreservierung\Implementierung\SOT-PROJECT-Tischreservierung\Tischreservierung-Employee\App.xaml
+C:\Users\souru\Desktop\SOT-PROJECT\Neuer Ordner\Restaurant-Tischreservierung\Implementierung\SOT-PROJECT-Tischreservierung\Tischreservierung-Employee\App.xaml
 52052082292
 21750853300
-17-576477640
-231825424499
+20-422659465
+23-456669285
 MainWindow.xaml;CustomerTabItem.xaml;ReservationTabItem.xaml;TableTabItem.xaml;TimeTabItem.xaml;
 
-False
+True
 

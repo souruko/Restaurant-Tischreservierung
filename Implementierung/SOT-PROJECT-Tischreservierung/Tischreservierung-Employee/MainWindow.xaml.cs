@@ -48,10 +48,10 @@ namespace Tischreservierung_Employee
             ReservationTab.Content = RTab;
             TimeTab.Content = TiTab;
 
-            TiTab.UpdateListBox(SelectedRestaurant);
-            RTab.UpdateListBox(SelectedRestaurant);
-            TaTab.UpdateListBox(SelectedRestaurant);
-            CTab.UpdateListBox(SelectedRestaurant);
+            TiTab.UpdateLB(SelectedRestaurant);
+            RTab.UpdateLB(SelectedRestaurant);
+            TaTab.UpdateLB(SelectedRestaurant);
+            CTab.UpdateLB(SelectedRestaurant);
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -65,9 +65,9 @@ namespace Tischreservierung_Employee
         private void RestaurantName_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SelectedRestaurant = RestaurantName.SelectedIndex + 1;
-            TaTab.UpdateListBox(SelectedRestaurant);
-            RTab.UpdateListBox(SelectedRestaurant);
-            TiTab.UpdateListBox(SelectedRestaurant);
+            TaTab.UpdateLB(SelectedRestaurant);
+            RTab.UpdateLB(SelectedRestaurant);
+            TiTab.UpdateLB(SelectedRestaurant);
         }
     }
 }

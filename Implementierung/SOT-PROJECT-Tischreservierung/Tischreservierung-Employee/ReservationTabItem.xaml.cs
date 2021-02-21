@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Tablereservation_Employee
+namespace Tischreservierung_Employee
 {
     /// <summary>
     /// Interaktionslogik für TableTabItem.xaml
@@ -24,7 +24,7 @@ namespace Tablereservation_Employee
 
         int SelectedRestaurant = 0;
 
-        Dictionary<int, ListBoxItem> ListBoxItems = new Dictionary<int, ListBoxItem>();
+        Dictionary<int, ListBoxItem> LBItems = new Dictionary<int, ListBoxItem>();
         public ReservationTabItem(DBContext ctx)
         {
             this.ctx = ctx;
@@ -34,17 +34,17 @@ namespace Tablereservation_Employee
 
         public void FillListBox()
         {
-            string txt = FilterTextBox.Text;
-            ReservatableListBox.Items.Clear();
-            ListBoxItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => ReservatableListBox.Items.Add(x.Value));
-            
+            string txt = FilterTB.Text;
+            ReservatischLB.Items.Clear();
+            LBItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => ReservatischLB.Items.Add(x.Value));
+
 
         }
 
-        public void UpdateListBox(int SelectedRestaurant)
+        public void UpdateLB(int SelectedRestaurant)
         {
 
-            ListBoxItems.Clear();
+            LBItems.Clear();
             this.SelectedRestaurant = SelectedRestaurant;
             if (SelectedRestaurant != 0)
             {
@@ -53,11 +53,11 @@ namespace Tablereservation_Employee
                 {
                     if (r.Tisch.RestaurantID == SelectedRestaurant)
                     {
-                        ListBoxItem lbi = new ListBoxItem();
+                        ListBoxItem i = new ListBoxItem();
                         TextBlock tb = new TextBlock();
                         tb.Text = $"ID: {r.ReservationID},  Number of People: {r.NumberOfPeople}, Table: {r.TableID}, Customer: {r.Customer.Name}, Start: {r.StartPoint}, End: {r.EndePoint}";
-                        lbi.Content = tb;
-                        ListBoxItems.Add(r.ReservationID, lbi);
+                        i.Content = tb;
+                        LBItems.Add(r.ReservationID, i);
 
                     }
                 }
@@ -66,7 +66,7 @@ namespace Tablereservation_Employee
             }
         }
 
-        private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void FilterTB_TextChanged(object sender, TextChangedEventArgs e)
         {
             FillListBox();
         }

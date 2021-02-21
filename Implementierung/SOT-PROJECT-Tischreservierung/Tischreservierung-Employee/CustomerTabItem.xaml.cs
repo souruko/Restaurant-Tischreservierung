@@ -24,7 +24,7 @@ namespace Tischreservierung_Employee
 
         int SelectedRestaurant = 0;
 
-        Dictionary<string, ListBoxItem> ListBoxItems = new Dictionary<string, ListBoxItem>();
+        Dictionary<string, ListBoxItem> LBItems = new Dictionary<string, ListBoxItem>();
         public CustomerTabItem(DBContext ctx)
         {
             this.ctx = ctx;
@@ -34,15 +34,15 @@ namespace Tischreservierung_Employee
 
         public void FillListBox()
         {
-            string txt = FilterTextBox.Text;
-            CustomerListBox.Items.Clear();
-            ListBoxItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => CustomerListBox.Items.Add(x.Value));
+            string txt = FilterTB.Text;
+            CustomerLB.Items.Clear();
+            LBItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => CustomerLB.Items.Add(x.Value));
         }
 
-        public void UpdateListBox(int SelectedRestaurant)
+        public void UpdateLB(int SelectedRestaurant)
         {
 
-            ListBoxItems.Clear();
+            LBItems.Clear();
             this.SelectedRestaurant = SelectedRestaurant;
 
             foreach (Customer c in ctx.Customer)
@@ -51,14 +51,14 @@ namespace Tischreservierung_Employee
                 TextBlock tb = new TextBlock();
                 tb.Text = $"Name: {c.Name}, Phonenumber: {c.Phonenumber}, Email: {c.Email} ID: {c.CustomerID}";
                 i.Content = tb;
-                ListBoxItems.Add(c.Name, i);
+                LBItems.Add(c.Name, i);
             }
 
             FillListBox();
 
         }
 
-        private void UpdateReservationListBox(string name)
+        private void UpdateReservationLB(string name)
         {
             foreach (Reservation r in ctx.Reservation)
             {
@@ -68,25 +68,25 @@ namespace Tischreservierung_Employee
                     TextBlock tb = new TextBlock();
                     tb.Text = $"ID: {r.ReservationID},  Number of People: {r.NumberOfPeople}, Table: {r.TableID}, Customer: {r.Customer.Name}, Start: {r.StartPoint}, End: {r.EndePoint}";
                     i.Content = tb;
-                    ReservationListBox.Items.Add(i);
+                    ReservationLB.Items.Add(i);
                 }
             }
         }
 
-        private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void FilterTB_TextChanged(object sender, TextChangedEventArgs e)
         {
             FillListBox();
         }
 
-        private void CustomerListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CustomerLB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ReservationListBox.Items.Clear();
+            ReservationLB.Items.Clear();
 
-            if (CustomerListBox.SelectedItem != null)
+            if (CustomerLB.SelectedItem != null)
             {
-                string name = ListBoxItems.First(x => x.Value == CustomerListBox.Items.GetItemAt(CustomerListBox.SelectedIndex)).Key;
+                string name = LBItems.First(x => x.Value == CustomerLB.Items.GetItemAt(CustomerLB.SelectedIndex)).Key;
 
-                UpdateReservationListBox(name);
+                UpdateReservationLB(name);
             }
         }
     }

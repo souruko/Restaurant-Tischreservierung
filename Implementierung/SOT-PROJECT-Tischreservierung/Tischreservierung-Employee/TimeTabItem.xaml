@@ -17,6 +17,6 @@
 
         </wpfTool:DateTimePicker>
 
-        <ListBox Grid.Row="1" Name="TimeListBox"></ListBox>
+        <ListBox Grid.Row="1" Name="TimeLB"></ListBox>
     </Grid>
 </UserControl>

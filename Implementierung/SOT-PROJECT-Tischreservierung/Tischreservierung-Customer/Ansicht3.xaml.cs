@@ -29,7 +29,7 @@ namespace Tischreservierung_Customer
 
         public void FillSummary(string RestaurantName, int TableID, int NumberOfPeople, TimeSpan StartPoint, TimeSpan EndPoint)
         {
-            SummaryTextBox.Text = $"Restaurant: {RestaurantName}\nTable: {TableID}\nNumber of People: {NumberOfPeople}\nTime: {StartPoint} - {EndPoint}";
+            SummaryTB.Text = $"Restaurant: {RestaurantName}\nTable: {TableID}\nNumber of People: {NumberOfPeople}\nTime: {StartPoint} - {EndPoint}";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -44,9 +44,9 @@ namespace Tischreservierung_Customer
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            string name = NameTextBox.Text;
-            string phoneNumber = PhoneNumberTextBox.Text;
-            string email = EmailTextBox.Text;
+            string name = NameTB.Text;
+            string phoneNumber = PhoneNumberTB.Text;
+            string email = EmailTB.Text;
 
             if(name == "" || phoneNumber == "" )
             {

@@ -30,9 +30,9 @@ namespace Tischreservierung_Customer
         public void FillTables()
         {
             int RestaurantID = parent.ctx.Restaurant.First(x => x.Name == parent.SelectedRestaurantName).RestaurantID;
-            var Tables = parent.ctx.Tisch;
+            var Tische = parent.ctx.Tisch;
 
-            TableListBox.Items.Clear();
+            TischListBox.Items.Clear();
 
             foreach (Tisch t in Tische)
             {
@@ -72,7 +72,7 @@ namespace Tischreservierung_Customer
                     }
 
 
-                    TableListBox.Items.Add(l);
+                    TischListBox.Items.Add(l);
 
                 }
             }
@@ -81,7 +81,7 @@ namespace Tischreservierung_Customer
         public void FillSelection()
         {
             RestaurantHeader.Text = parent.SelectedRestaurantName;
-            NumberOfPeopleTextBox.Text = parent.NumberOfPeople.ToString();
+            NOPTextBox.Text = parent.NumberOfPeople.ToString();
 
             FillTables();
             
@@ -92,7 +92,7 @@ namespace Tischreservierung_Customer
 
         public int GetSelectedTable()
         {
-            return TableListBox.SelectedIndex + 1;
+            return TischListBox.SelectedIndex + 1;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
