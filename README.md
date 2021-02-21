@@ -7,4 +7,4 @@ Marco Bentz   (Github: Marco041994)
 Oliver Risch  (Github: souruko)
 Fabian Ruttar (Github: Bottares)
 
-<img src="/Dokumentation/Customer-View1" alt="Alt-Text" title="optionaler Titel" />
+![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View1.PNG?raw=true)
