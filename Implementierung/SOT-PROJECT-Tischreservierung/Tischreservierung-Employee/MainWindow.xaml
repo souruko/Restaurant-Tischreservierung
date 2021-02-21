@@ -13,7 +13,7 @@
             <RowDefinition Height="5*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ComboBox x:Name="RestaurantName" Grid.Column="1" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" >
+        <ComboBox x:Name="RestaurantName" Grid.Column="1" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="RestaurantName_SelectionChanged">
             <ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
@@ -22,16 +22,16 @@
         </ComboBox>
 
         <TabControl Grid.Row="1">
-            <TabItem Header="Table">
+            <TabItem Name="TableTab" Header="Table">
                 
             </TabItem>
-            <TabItem Header="Reservation">
+            <TabItem Name="ReservationTab" Header="Reservation">
 
             </TabItem>
-            <TabItem Header="Customer">
+            <TabItem Name="CustomerTab" Header="Customer">
 
             </TabItem>
-            <TabItem Header="Time">
+            <TabItem Name="TimeTab" Header="Time">
 
             </TabItem>
         </TabControl>

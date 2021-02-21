@@ -24,3 +24,4 @@ C:\Users\souru\Desktop\SOT-PROJECT\SOT-PROJECT-Tischreservierung\Tischreservieru
 C:\Users\souru\Desktop\SOT-PROJECT\SOT-PROJECT-Tischreservierung\Tischreservierung-Customer\obj\Debug\Tischreservierung-Customer.csproj.GenerateResource.Cache
 C:\Users\souru\Desktop\SOT-PROJECT\SOT-PROJECT-Tischreservierung\Tischreservierung-Customer\obj\Debug\Tischreservierung-Customer.exe
 C:\Users\souru\Desktop\SOT-PROJECT\SOT-PROJECT-Tischreservierung\Tischreservierung-Customer\obj\Debug\Tischreservierung-Customer.pdb
+C:\Users\souru\Desktop\SOT-PROJECT\SOT-PROJECT-Tischreservierung\Tischreservierung-Customer\bin\Debug\de\EntityFramework.SqlServer.resources.dll

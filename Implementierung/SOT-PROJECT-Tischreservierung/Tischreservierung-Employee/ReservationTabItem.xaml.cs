@@ -20,9 +20,55 @@ namespace Tischreservierung_Employee
     /// </summary>
     public partial class ReservationTabItem : UserControl
     {
-        public ReservationTabItem()
+        DBContext ctx;
+
+        int SelectedRestaurant = 0;
+
+        Dictionary<int, ListBoxItem> LBItems = new Dictionary<int, ListBoxItem>();
+        public ReservationTabItem(DBContext ctx)
         {
+            this.ctx = ctx;
+
             InitializeComponent();
+        }
+
+        public void FillListBox()
+        {
+            string txt = FilterTB.Text;
+            ReservatischLB.Items.Clear();
+            LBItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => ReservatischLB.Items.Add(x.Value));
+
+
+        }
+
+        public void UpdateLB(int SelectedRestaurant)
+        {
+
+            LBItems.Clear();
+            this.SelectedRestaurant = SelectedRestaurant;
+            if (SelectedRestaurant != 0)
+            {
+
+                foreach (Reservation r in ctx.Reservation)
+                {
+                    if (r.Tisch.RestaurantID == SelectedRestaurant)
+                    {
+                        ListBoxItem i = new ListBoxItem();
+                        TextBlock tb = new TextBlock();
+                        tb.Text = $"ID: {r.ReservationID},  Number of People: {r.NumberOfPeople}, Table: {r.TableID}, Customer: {r.Customer.Name}, Start: {r.StartPoint}, End: {r.EndePoint}";
+                        i.Content = tb;
+                        LBItems.Add(r.ReservationID, i);
+
+                    }
+                }
+
+                FillListBox();
+            }
+        }
+
+        private void FilterTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FillListBox();
         }
     }
 }

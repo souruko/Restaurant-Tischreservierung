@@ -23,7 +23,9 @@ namespace Tischreservierung_Employee
     {
         DBContext ctx;
 
-        Dictionary<int, ListBoxItem> Items = new Dictionary<int, ListBoxItem>();
+        int SelectedRestaurant = 0;
+
+        Dictionary<int, ListBoxItem> LBItems = new Dictionary<int, ListBoxItem>();
         public TableTabItem(DBContext ctx)
         {
             this.ctx = ctx;
@@ -33,25 +35,68 @@ namespace Tischreservierung_Employee
 
         public void FillListBox()
         {
-            foreach(ListBoxItem i in Items)
+            string txt = FilterTB.Text;
+            TableLB.Items.Clear();
+            LBItems.Where(x => x.Key.ToString().Contains(txt)).ToList().ForEach(x => TableLB.Items.Add(x.Value));
+
+
+        }
+
+        public void UpdateLB(int SelectedRestaurant)
+        {
+
+            LBItems.Clear();
+            this.SelectedRestaurant = SelectedRestaurant;
+            if (SelectedRestaurant != 0)
             {
-                
+
+                foreach (Tisch t in ctx.Tisch)
+                {
+                    if (t.RestaurantID == SelectedRestaurant)
+                    {
+                        ListBoxItem i = new ListBoxItem();
+                        TextBlock tb = new TextBlock();
+                        tb.Text = $"ID: {t.TableID}  TableSize: {t.TableSize}";
+                        i.Content = tb;
+                        LBItems.Add(t.TableID, i);
+
+                    }
+                }
+
+                FillListBox();
             }
         }
 
-        public void Open()
+        private void UpdateReservationLB(int TableID)
         {
-            TableLB.Items.Clear();
-            Items.Clear();
-
-            foreach(Tisch t in ctx.Tisch)
+            foreach(Reservation r in ctx.Reservation)
             {
-                ListBoxItem i = new ListBoxItem();
-                TextBlock tb = new TextBlock();
-                tb.Text = $"{t.TableID}";
-                i.Content = tb;
-
-                Items.Add(t.TableID ,i);
+                if(r.TableID == TableID)
+                {
+                    ListBoxItem i = new ListBoxItem();
+                    TextBlock tb = new TextBlock();
+                    tb.Text = $"ID: {r.ReservationID},  Number of People: {r.NumberOfPeople}, Table: {r.TableID}, Customer: {r.Customer.Name}, Start: {r.StartPoint}, End: {r.EndePoint}";
+                    i.Content = tb;
+                    ReservationLB.Items.Add(i);
+                }
             }
+        }
+
+        private void FilterTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FillListBox();
+        }
+
+        private void TableLB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ReservationLB.Items.Clear();
+
+            if (TableLB.SelectedItem != null)
+            {
+                int index = LBItems.First(x => x.Value == TableLB.Items.GetItemAt(TableLB.SelectedIndex)).Key;
+
+                UpdateReservationLB(index);
+            }
+        }
     }
 }

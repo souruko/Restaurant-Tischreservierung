@@ -4,9 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Tischreservierung_Employee"
+             xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <wpfTool:DateTimePicker Name="TimePicker" Grid.Row="0" ValueChanged="TimePicker_ValueChanged">
+
+        </wpfTool:DateTimePicker>
+
+        <ListBox Grid.Row="1" Name="TimeLB"></ListBox>
     </Grid>
 </UserControl>

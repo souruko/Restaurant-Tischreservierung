@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Name="FilterTB" TextChanged="FilterTB_TextChanged"></TextBox>
+        <ListBox Grid.Row="1" Name="CustomerLB" SelectionChanged="CustomerLB_SelectionChanged"></ListBox>
+        <ListBox Grid.Row="2" Name="ReservationLB"></ListBox>
     </Grid>
 </UserControl>

@@ -22,6 +22,14 @@ namespace Tischreservierung_Employee
     /// </summary>
     public partial class MainWindow : Window
     {
+        CustomerTabItem CTab;
+        TableTabItem TaTab;
+        TimeTabItem TiTab;
+        ReservationTabItem RTab;
+
+        int SelectedRestaurant = 0;
+
+
         DBContext ctx;
         private ICollectionView CollectionView;
 
@@ -29,6 +37,21 @@ namespace Tischreservierung_Employee
         {
             ctx = new DBContext();
             InitializeComponent();
+
+            CTab = new CustomerTabItem(ctx);
+            TaTab = new TableTabItem(ctx);
+            TiTab = new TimeTabItem(ctx);
+            RTab = new ReservationTabItem(ctx);
+
+            CustomerTab.Content = CTab;
+            TableTab.Content = TaTab;
+            ReservationTab.Content = RTab;
+            TimeTab.Content = TiTab;
+
+            TiTab.UpdateLB(SelectedRestaurant);
+            RTab.UpdateLB(SelectedRestaurant);
+            TaTab.UpdateLB(SelectedRestaurant);
+            CTab.UpdateLB(SelectedRestaurant);
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -37,6 +60,14 @@ namespace Tischreservierung_Employee
             CollectionView = CollectionViewSource.GetDefaultView(ctx.Restaurant.Local);
             ParentGrid.DataContext = CollectionView;
 
+        }
+
+        private void RestaurantName_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SelectedRestaurant = RestaurantName.SelectedIndex + 1;
+            TaTab.UpdateLB(SelectedRestaurant);
+            RTab.UpdateLB(SelectedRestaurant);
+            TiTab.UpdateLB(SelectedRestaurant);
         }
     }
 }

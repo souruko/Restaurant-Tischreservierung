@@ -142,6 +142,8 @@ namespace Tischreservierung_Customer
 
             ctx.SaveChanges();
 
+            MessageBox.Show($"Thank you for your reservation!\n ReservationID: {r.ReservationID}");
+
             ViewCancel();
 
         }
