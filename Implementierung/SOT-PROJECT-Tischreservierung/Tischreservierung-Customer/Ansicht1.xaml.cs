@@ -93,29 +93,29 @@ namespace Tischreservierung_Customer
             {
                 Restaurant Rest = ctx.Restaurant.First(x => x.RestaurantID == RestaurantNameComboBox.SelectedIndex+1);
 
-                TimeSpan viertelStunde = TimeSpan.FromMinutes(15);
+                TimeSpan quarterofanhour = TimeSpan.FromMinutes(15);
                 var Counter = Rest.OpenTime.Value;
                 var Ende = Rest.CloseTime.Value;
 
                 while (Counter < Ende)
                 {
-                    ComboBoxItem i = new ComboBoxItem();
-                    i.Content = Counter;
+                    ComboBoxItem cbi = new ComboBoxItem();
+                    cbi.Content = Counter;
 
 
-                    StartComboBox.Items.Add(i);
-                    Counter += viertelStunde;
+                    StartComboBox.Items.Add(cbi);
+                    Counter += quarterofanhour;
                 }
 
-                Counter = Rest.OpenTime.Value+viertelStunde;
+                Counter = Rest.OpenTime.Value+quarterofanhour;
                 while (Counter <= Ende)
                 {
-                    ComboBoxItem i = new ComboBoxItem();
-                    i.Content = Counter;
+                    ComboBoxItem cbi = new ComboBoxItem();
+                    cbi.Content = Counter;
 
 
-                    EndComboBox.Items.Add(i);
-                    Counter += viertelStunde;
+                    EndComboBox.Items.Add(cbi);
+                    Counter += quarterofanhour;
                 }
 
             }

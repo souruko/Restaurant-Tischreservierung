@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tischreservierung_Employee
+namespace Tablereservation_Employee
 {
     using System;
     using System.Data.Entity;

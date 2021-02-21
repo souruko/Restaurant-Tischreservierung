@@ -1,11 +1,11 @@
-﻿Tischreservierung-Employee
+﻿Tablereservation-Employee
 
 
 winexe
 C#
 .cs
 C:\Users\marco\OneDrive\Desktop\Projekt SOT\Restaurant-Tischreservierung\Implementierung\SOT-PROJECT-Tischreservierung\Tischreservierung-Employee\obj\Debug\
-Tischreservierung_Employee
+Tablereservation_Employee
 none
 false
 DEBUG;TRACE
@@ -16,5 +16,5 @@ C:\Users\marco\OneDrive\Desktop\Projekt SOT\Restaurant-Tischreservierung\Impleme
 231825424499
 MainWindow.xaml;CustomerTabItem.xaml;ReservationTabItem.xaml;TableTabItem.xaml;TimeTabItem.xaml;
 
-True
+False
 

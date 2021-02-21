@@ -1,4 +1,4 @@
-﻿<Application x:Class="Tischreservierung_Employee.App"
+﻿<Application x:Class="Tablereservation_Employee.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Tischreservierung_Employee"
