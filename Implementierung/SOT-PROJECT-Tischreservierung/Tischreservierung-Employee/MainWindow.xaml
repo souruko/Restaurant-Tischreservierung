@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Tischreservierung_Employee"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1000"
-        Loaded="UserControl_Loaded">
+        Loaded="UserControl_Loaded"
+        Background="Coral">
     <Grid Name="ParentGrid">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>

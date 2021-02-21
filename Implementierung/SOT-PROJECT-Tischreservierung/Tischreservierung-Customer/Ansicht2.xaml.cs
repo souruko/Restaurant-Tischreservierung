@@ -107,11 +107,11 @@ namespace Tischreservierung_Customer
 
         private void Select_Click(object sender, RoutedEventArgs e)
         {
-            int tableIndex = GetSelectedTable();
+            int? tableIndex = GetSelectedTable();
 
             if (tableIndex != null)
             {
-                parent.View2Select(tableIndex);
+                parent.View2Select(Convert.ToInt32(tableIndex));
             }
         }
     }

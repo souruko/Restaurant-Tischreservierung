@@ -65,8 +65,8 @@ namespace Tischreservierung_Customer
 
         public string GetRestaurant()
         {
-            if (nameComboBox.SelectedItem != null)
-                return nameComboBox.Text;
+            if (RestaurantNameComboBox.SelectedItem != null)
+                return RestaurantNameComboBox.Text;
             else
                 return "";
         }
@@ -84,14 +84,14 @@ namespace Tischreservierung_Customer
 
         }
 
-        private void nameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void RestaurantNameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             StartComboBox.Items.Clear();
             EndComboBox.Items.Clear();
 
-            if (nameComboBox.SelectedItem != null)
+            if (RestaurantNameComboBox.SelectedItem != null)
             {
-                Restaurant Rest = ctx.Restaurant.First(x => x.RestaurantID == nameComboBox.SelectedIndex+1);
+                Restaurant Rest = ctx.Restaurant.First(x => x.RestaurantID == RestaurantNameComboBox.SelectedIndex+1);
 
                 TimeSpan viertelStunde = TimeSpan.FromMinutes(15);
                 var Counter = Rest.OpenTime.Value;

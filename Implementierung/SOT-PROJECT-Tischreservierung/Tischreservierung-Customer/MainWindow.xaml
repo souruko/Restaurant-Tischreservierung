@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Tischreservierung_Customer"
         mc:Ignorable="d"
         Name="MW"
+        Background="Coral"
         Title="MainWindow" Height="800" Width="1000">
     <Grid>
         <ContentControl Name="ContentC"></ContentControl>

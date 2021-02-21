@@ -30,8 +30,8 @@
         <ComboBox Name="EndComboBox"  Grid.Row="3" Grid.Column="1"></ComboBox>
 
         <Button Name="ConfirmButton" Grid.Row="4" Grid.Column="1" Click="Button_Click">Confirm</Button>
-       
-            <ComboBox x:Name="nameComboBox" Grid.Column="1" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="nameComboBox_SelectionChanged">
+
+        <ComboBox x:Name="RestaurantNameComboBox" Grid.Column="1" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="RestaurantNameComboBox_SelectionChanged">
                 <ComboBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel/>
