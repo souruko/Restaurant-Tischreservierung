@@ -7,12 +7,12 @@ Auflistung der Gruppenmitglieder:
 * Oliver Risch  (Github: souruko)
 * Fabian Ruttar (Github: Bottares)
 
-Customer GUI:
+Customer GUI:  
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View1.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View2.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Customer-View3.PNG?raw=true)
 
-Employee GUI:
+Employee GUI:  
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Employee%20-%20Customer.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Employee%20-%20Reservation.PNG?raw=true)
 ![alt text](https://github.com/souruko/Restaurant-Tischreservierung/blob/main/Dokumentation/Employee%20-%20Time.PNG?raw=true)
